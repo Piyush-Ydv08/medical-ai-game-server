@@ -83,7 +83,7 @@ app.post('/chat', async (req, res) => {
            - Otherwise: Standard length (approx 50 words).
 
         4. If I provide AUDIO, transcribe it internally and answer the medical question found in it.
-        5. If the audio is unclear, say "I couldn't hear that clearly."
+        5. If the audio is unclear, say "I couldn't hear that clearly, Note: only if its a audio."
         6. Answer based on Context Data.
         7. Do NOT give real medical advice. Always add a disclaimer.
         8. If the answer is not in the text, say "I'm sorry, that information is not in my medical guide.
@@ -136,4 +136,5 @@ app.post('/chat', async (req, res) => {
 loadMedicalData();
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
+
 });
